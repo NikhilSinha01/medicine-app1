@@ -1,0 +1,54 @@
+<div class="container" style="border-color: bisque;">
+    <table  style="width:auto">
+      <thead>
+        <tr>
+          <th>OrderID</th>
+          <th>emailId</th>
+          <th>BillingAddress</th>
+          <th>BillingPhone</th>
+          <th>cartProduct</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let order of orderedCart" >
+          <td>{{order.orderId}}</td>
+          <td  >{{order.emailId}}</td>
+          <td  >{{order.billingAddress}}</td>
+          <td >{{order.billingPhone}}</td>
+          
+          <td class="cart-detail">
+            <div *ngFor="let product of order.cart.prod">
+              <p><strong>ProductId:</strong> {{product.productId}}</p>
+              <p><span>Title:</span> {{product.title}}</p>
+              <p><span>Quantity:</span> {{product.quantity}}</p>
+              <p><span>Price:</span> {{product.price}}</p>
+              <hr style="border-top: 1px solid #000; margin: 10px 0;">
+            </div>
+            <div><strong>TotalPrice:</strong> {{order.cart.totalprice}}</div>
+          </td>
+          
+          <td>             
+              <button  (click)="openDelete(contentDelete, order)" class="btn delete">Cancel</button>
+          </td>
+        </tr>
+        
+        <ng-template #contentDelete let-modal>
+          <div class="modal-header">
+            <h5 class="modal-title">Confirm Delete</h5>
+          </div>
+          <div class="modal-body">
+            <h6>Are you sure you want to cancel this order?</h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" (click)="modal.close('Save click')">Cancel</button>
+            <button data-dismiss="modal" class="btn btn-danger"(click)="deleteOrderById()">Delete </button> 
+          </div>
+        </ng-template>
+        
+        
+      </tbody>
+    </table>
+  </div>
+  

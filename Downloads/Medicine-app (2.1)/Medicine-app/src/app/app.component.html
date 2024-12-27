@@ -1,0 +1,9 @@
+
+<app-header *ngIf="!isInAdminRoute()"></app-header>
+
+<router-outlet></router-outlet>
+
+<app-footer *ngIf="!isInAdminRoute()" style="position: fixed; left: 0; bottom: 0; width: 100%; background-color: #fff; box-shadow: 0 -1px 5px rgba(117, 26, 202, 0.1); z-index: 1000;"></app-footer>
+
+
+

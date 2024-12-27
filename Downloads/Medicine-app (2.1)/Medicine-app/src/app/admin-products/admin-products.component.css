@@ -1,0 +1,151 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+    
+ 
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn {
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.btn.edit {
+    background-color: #28a745;
+    width:80px;
+    height: 60px;
+
+}
+
+.btn.delete {
+    background-color: #dc3545;
+    width:80px;
+    height: 60px;
+
+}
+
+
+    #addProductBtn {
+        background-color: #4CAF50; /* Green background color */
+        border: none; /* No border */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Padding */
+        text-align: center; /* Centered text */
+        text-decoration: none; /* No underline */
+        display: inline-block; /* Display as inline block */
+        margin: 15px 0; /* Margin */
+        cursor: pointer; /* Cursor on hover */
+       
+    }
+    .butt {
+        margin-bottom: 10px;
+        background-color: #007bff;
+        width:100%; /* Make button width 100% of its container */
+        text-align: center; /* Center text horizontally */
+        padding: 10px; /* Add padding for better appearance */
+        box-sizing: border-box; /* Include padding and border in total width */
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+    /* Styles for the form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+/* Styles for the form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styles for the form inputs */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Styles for the checkbox */
+input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Styles for the submit button */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styles for the submit button on hover */
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styles for the anchor link styled as a button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styles for the anchor link on hover */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.head {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 10vh; /* Set height to 100% of viewport height for vertical centering */
+}

@@ -1,0 +1,96 @@
+.small-container {
+    display: grid; /* Make sure the container uses grid layout */
+}
+
+.title {
+    text-align: center;
+    margin: 5px auto 40px; /* Adjust margin for spacing */
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.product-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust this to control the number of columns */
+    gap: 50px; /* Controls spacing between items, adjust this value */
+}
+
+.card {
+    width: 100%; /* Use full width within the grid */
+    max-width: 250px; /* Ensure the card doesn't grow too wide */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 0px; /* Adjust padding for better spacing */
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    background-color: #fff; /* Ensure background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    /* Remove margin-left and margin-right to reduce space between cards */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    background-color: rgb(215, 27, 146);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Ensure spacing between button and content */
+}
+
+.button:hover {
+    background-color: rgb(107, 64, 12);
+}
+
+.buttonStock {
+    background-color: #ccc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    max-width: 150px; /* Adjust image size */
+    margin-bottom: 15px; /* Space between image and title */
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    margin-bottom: -5px;
+    font-size: 16px;
+}
+.main-content {
+    flex-grow: 1; /* This will ensure that the content takes up available space */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .small-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .small-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        gap: 10px; /* Ensure gap is adjusted on small screens */
+    }
+}

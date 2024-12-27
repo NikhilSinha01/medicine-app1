@@ -1,0 +1,73 @@
+
+  .container {
+    width: 100%; /* set max width for container */
+    margin: 0px auto; /* add margin and center container */
+    padding: 10px; /* add padding to container */
+    border: 2px solid #ddd; /* add border to container */
+    border-radius: 10px; /* add border radius to container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add box shadow to container */
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    margin-top: 50px;
+   
+  }
+  
+  th {
+    background-color: #f0f0f0;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  .btn {
+    color: #fff;
+    border: none;
+    margin: 1px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+  .edit {
+    background-color: #337ab7;
+  }
+  
+  .edit:hover {
+    background-color: #23527c;
+  }
+  
+  .delete {
+    background-color: #d9534f;
+  }
+  
+  .delete:hover {
+    background-color: #c9302c;
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .btn-group .btn {
+    margin-right: 10px;
+  }
+  
+  .btn-group .btn:last-child {
+    margin-right: 0;
+  }

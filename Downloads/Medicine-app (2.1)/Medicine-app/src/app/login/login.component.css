@@ -1,0 +1,76 @@
+.container-fluid {
+    background-image: url("https://img.freepik.com/premium-vector/mint-abstract-watercolor-texture-background-green-watercolour-brush-splash-pattern_548264-1223.jpg");
+    background-size: cover; /* Ensures the image covers the whole container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    margin-bottom: -80px;
+    padding: 0;
+    height: 100vh; /* Ensures the container takes the full viewport height */
+}
+
+.heading1 {
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    color: darkslategrey;
+}
+
+label {
+    color: brown;
+    font-family: sans-serif;
+
+}
+
+input[type=Email],
+input[type=Password] {
+    color: brown;
+    font-family: monospace;
+    background-color: antiquewhite;
+    margin-bottom: 20px
+}
+
+input[type=Email]::placeholder,
+input[type=Password]::placeholder {
+    color: brown;
+
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    /* Adjust as needed */
+}
+
+.btn-success {
+    transition: 0.5s ease;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+}
+
+.account {
+    margin-top: 20px;
+    font-size: 14px;
+    color: red;
+    margin-right: 350px;
+    display: inline-block;
+}
+
+.account a {
+
+    color: green;
+    text-decoration: none;
+
+}
+
+.account a:hover {
+    text-decoration: underline;
+}
+.error-message{
+    margin-top: -15px; /* Adjust this value to bring the error message closer */
+    color: tomato;
+  
+}

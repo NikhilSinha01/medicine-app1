@@ -1,0 +1,46 @@
+/* Resetting default margin and padding */
+
+/* Header styles */
+.admin-header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #f4f4f4;
+    width: 200px;
+    position: fixed;
+    top: 64px;
+    /* Adjust this value to keep the sidebar below the header */
+    left: 0;
+    height: 100vh;
+    /* Adjust this value to make the sidebar fill the remaining height */
+    overflow-y: auto;
+
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+/* Content styles */
+.main-content {
+    /* Ensure content starts below the header */
+    margin-left: 200px;
+    /* Ensure content doesn't go under the sidebar */
+    padding: 0px 20px;
+}

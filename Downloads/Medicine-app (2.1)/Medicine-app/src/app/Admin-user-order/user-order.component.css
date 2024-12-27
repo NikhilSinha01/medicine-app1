@@ -1,0 +1,93 @@
+
+
+.container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  border: 1px solid #bd2828;
+
+}
+
+th {
+  border: 1px solid #ddd;
+
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border: 4px, solid, rgb(21, 121, 146);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: 8px;
+  text-align: left;
+
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+.edit {
+  background-color: #337ab7;
+}
+
+.edit:hover {
+  background-color: #23527c;
+}
+
+.delete {
+  background-color: #d9534f;
+}
+
+.delete:hover {
+  background-color: #c14be5;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.btn-group .btn {
+  margin-right: 10px;
+}
+
+.btn-group .btn:last-child {
+  margin-right: 0;
+}
+
+.cart-detail p span {
+  color: #3e8e41;
+  font-weight: 700;
+}

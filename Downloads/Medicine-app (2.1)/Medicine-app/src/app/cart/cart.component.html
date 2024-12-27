@@ -1,0 +1,50 @@
+<div class="container cart-page">
+    <div class="table-container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cart.prod">
+                    <td>
+                        <div class="cart-info">
+                            <img src="{{item.image}}" class="img-fluid">
+                            <div>
+                                <p>{{item.title}}</p>
+                                <small>Price: {{item.price}}</small>
+                                <br>
+                                <a href="javascript:void(0)"
+                                    (click)="removeProduct(cart.userId, item.productId)">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity">
+                            <button class="quantity-btn btn btn-outline-secondary" type="button" [attr.min]="0"
+                                (click)="updateQuantity(cart.cartId, item.productId, 'decrease')">-</button>
+                            <input type="number" class="quantity-input form-control" [(ngModel)]="item.quantity">
+                            <button class="quantity-btn btn btn-outline-secondary" type="button"
+                                (click)="updateQuantity(cart.cartId, item.productId, 'increase')">+</button>
+                        </div>
+                    </td>
+                    <td>Total price: {{item.price*item.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="total-price">
+        <table class="table">
+            <tr>
+                <td>Subtotal</td>
+                <td>{{cart.totalprice}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="button">
+        <button class="btn btn-success" (click)="proceedToCheckout(cart.totalprice,cart.cartId)">Proceed To Checkout</button>
+    </div>
+</div>

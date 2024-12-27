@@ -1,0 +1,90 @@
+.cart-page {
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.table-container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.cart-info {
+  display: flex;
+  align-items: center;
+}
+
+.cart-info img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+th {
+  background-color: #ff523b;
+  color: #fff;
+}
+
+td {
+  text-align: center;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.quantity-input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 400px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button button:hover {
+  background-color: #45a049;
+}

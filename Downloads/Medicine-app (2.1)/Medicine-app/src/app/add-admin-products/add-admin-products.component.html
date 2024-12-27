@@ -1,0 +1,63 @@
+<div class="body">
+    <form #regdata="ngForm" (ngSubmit)="addProduct(regdata)">
+
+      <label for="Title">Title: <span class="required">*</span></label><br>
+<input type="text" id="title" name="title" required ngModel #title="ngModel"><br><br>
+
+<div *ngIf="title.invalid && (title.dirty || title.touched)" class="danger-message">
+  <div *ngIf="title.errors && title.errors['required']">
+    Title Should not be blank
+  </div>
+</div>
+
+    
+    <label for="description">Description: <span class="required">*</span></label><br>
+    <textarea id="descp" name="descp"  required ngModel  #descp="ngModel"></textarea><br><br>
+
+    
+    <div *ngIf="descp.invalid && (descp.dirty || descp.touched)" class="danger-message">
+      <div *ngIf="descp.errors && descp.errors['required']">
+      Description Should not be blank
+      </div>
+  </div>
+
+    <label for="price">Price: <span class="required">*</span></label><br>
+    <input type="number" id="price" name="price"  required ngModel  #price="ngModel"><br><br>
+
+    <div *ngIf="price.invalid && (price.dirty || price.touched)" class="danger-message">
+      <div *ngIf="price.errors && price.errors['required']">
+      Price Should not be blank
+      </div>
+  </div>
+    
+    <label for="discounted_price">Discounted Price:</label><br>
+    <input type="number" id="discountedPrice" name="discountedPrice" min="0" step="0.01" ngModel><br><br>
+    
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" disabled value="1"><br><br>
+    
+
+    <label for="image">Image url: <span class="required">*</span></label><br>
+    <input type="String" id="image" name="image" required ngModel   #image="ngModel"><br><br>
+
+    <div *ngIf="image.invalid && (image.dirty || image.touched)" class="danger-message">
+      <div *ngIf="image.errors && image.errors['required']">
+     Please provide image url
+      </div>
+  </div>
+    
+    <label for="stock">Stock:</label><br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="stock" ngModel>
+        <label class="form-check-label" for="flexCheckChecked">
+          Stock
+        </label>
+      </div>
+    
+    <input type="submit" value="Submit">
+</form>
+  
+</div>
+
+
+

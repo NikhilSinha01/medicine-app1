@@ -1,0 +1,43 @@
+
+<div>
+    <div class="head">
+        <h2>Modify Your Product</h2>
+    </div>
+    
+    <div>
+         <form #regdata="ngForm" (ngSubmit)="editProduct(regdata)">
+            <div>
+                <label for="productId">ID:</label>
+                <input type="text" id="productId" name="productId" required>
+            </div>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required ngModel>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <input type="text" id="descp" name="descp" required ngModel>
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required ngModel>
+            </div>
+            <div>
+                <label for="discountedPrice">Discounted Price:</label>
+                <input type="number" id="discountedPrice" name="discountedPrice" step="0.01" ngModel>
+            </div>
+            <div>
+                <label for="quantity">quantityAvailable:</label>
+                <input type="number" id="quantity" name="quantity" step="0.01" ngModel>
+            </div>
+            <div>
+                <label for="inStock">In Stock:</label>
+                <input type="text" id="stock" name="stock" ngModel>
+                <div class="button">
+                    <button type="submit" class="btn btn-success" value="register">Register</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    

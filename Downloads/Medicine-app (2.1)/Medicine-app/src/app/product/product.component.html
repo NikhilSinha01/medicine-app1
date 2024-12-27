@@ -1,0 +1,20 @@
+<div class="small-container" >
+    <h2 class="title">Featured Products</h2>
+    <div class="product-grid">
+        <div class="card" *ngFor="let product of products">
+            <div class="image">
+                <img src="{{product.image}}" height="100px" width="100px" alt="" />
+            </div>
+            <h4>{{product.title}}</h4>
+            <p>Rs. {{product.price}}</p>
+            @if (product.stock) {
+                <button class="button" (click)="addToCartbyBotton(product.productId)">Add to Cart</button>
+                <button class="button" (click)="openDialog(product)" style="background-color: lightcoral">ViewDetails</button>
+                
+                
+            } @else {
+                <button class="buttonStock">Out of Stock</button>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container" style="width: 850px;">
+  <table style="width:auto">
+    <thead>
+      <tr>
+        <th>SI.NO</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of adminUser | paginate: { itemsPerPage: 20, currentPage: p }; let i = index">
+        <td>{{i}}</td>
+        <td>{{ user.userId }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <a (click)="userEdit(user.userId)" class="btn edit" title="Edit">Edit</a>
+          <button 
+          (click)="openDelete(contentDelete, user)" class="btn delete" title="Delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<ng-template #contentDelete let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Confirm Delete</h5>
+  </div>
+  <div class="modal-body">
+    <h6>Are you sure you want to delete this record?</h6>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-warning" (click)="modal.close('Save click')">Cancel</button>
+    <button data-dismiss="modal" class="btn btn-danger"(click)="deleteUserByUserId()">Delete</button> 
+  </div>
+</ng-template>
